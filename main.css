@@ -4,68 +4,70 @@ body {
 
 .section1 {
     width: 750px;
-    height: 200px;
+    height: 220px;
     float: left;
     margin-left: 120px;
 }
 
 .section2 {
     width: 320px;
-    height: 220px;
+    height: 180px;
     float: right;
     margin-right: 120px;
 }
 
-.line1{
+.line1 {
     width: 750px;
+    border-bottom: 1px solid #d9d9d9;
+    margin-top: 70px;
+}
+
+.line11 {
+    margin-top: 50px;
+}
+
+.line2 {
+    width: 320px;
     border-bottom: 1px solid #d9d9d9;
 }
 
-.line2{
-    width: 320px;
-    border-bottom: 1px solid #d9d9d9;
+.line21 {
+    margin-top: 60px;
 }
 
 .box {
     background-color: white;
     box-shadow: 3px 3px 2px #aeaeae;
-
     border-radius: 4px;
     border: 1px solid #ababab;
-
     margin-top: 100px;
-
 }
 
-.box3{
-    width: 120px;
-    height: 20px;
+.box3 {
+    width: auto;
+    height: 25px;
     background-color: #e6e6e6;
-
-    margin: 15px;
-
+    margin: 15px 5px 15px 5px;
     border-radius: 4px;
     border: 1px solid #d9d9d9;
-
-    padding:5px;
-
-    font-size: 10px;
-    color: darkgrey;
+    padding: 3px;
+    font-size: 12px;
+    color: #555555;
     font-family: "Sans-serif";
-
+    float: left;
+    display: inline-block;
 }
 
 .addBlock {
     width: 700px;
     height: 17px;
     background-color: white;
-
     margin: 15px;
-
     border-radius: 4px;
     border: 1px solid #d9d9d9;
-
-    padding:10px;
+    padding: 10px;
+    float: right;
+    position: relative;
 }
 
 .text1 {
@@ -76,23 +78,107 @@ body {
 
 .addButton {
     width: 120px;
-    height: 35px;
-
+    height: 40px;
     background-color: #2186cf;
-
     border-radius: 4px;
     border: 1px solid #d9d9d9;
-
     color: white;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
-
     float: right;
+    margin: 15px 15px 15px 615px;
+    position: absolute;
+}
 
+.minus {
     display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin: 10px 5px 10px 0px;
+    background-color: #d92929;
+    border-radius: 4px;
+    border: 1px solid #d9d9d9;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-color: #dc2a2a;
+    border-radius: 150px;
+    box-shadow: 0px 2px #c12525;
+    float: right;
+}
 
+.plus {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin: 10px 190px 10px 0px;
+    background-color: #21b844;
+    border-radius: 4px;
+    border: 1px solid #d9d9d9;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-color: #26d24e;
+    border-radius: 150px;
+    box-shadow: 0px 2px #178330;
+    float: right;
+}
+
+.quant {
+    display: inline-block;
+    align: center;
+    height: 10px;
+    width: 10px;
+    background-color: #e6e6e6;
+    color: #313131;
+    margin: 10px 5px 10px 5px;
+    font-size: 12px;
+    font-family: Arial;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    float: right;
+}
+
+.baught {
+    height: 30px;
+    width: 80px;
+    float: right;
+    margin: 10px 5px 10px 5px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    border: 1px solid #d9d9d9;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0px 2px #b7b7b7;
+    float: right;
+}
+
+.cross {
+    height: 30px;
+    width: 30px;
+    float: right;
+    margin: 10px 15px 10px 0px;
+    background-color: #d92929;
+    border-radius: 4px;
+    border: 1px solid #d9d9d9;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-color: #dc2a2a;
+    box-shadow: 0px 2px #c12525;
 }
 
 .text4 {
@@ -104,11 +190,24 @@ body {
     padding: 10px;
 }
 
-#c3 {
-    width: 5px;
-    height: 5px;
-    background-color: orangered;
-    border-radius: 15px;
-
+.c1 {
+    display: inline-block;
+    align: center;
+    height: 10px;
+    width: 10px;
+    background-color: #f06e1d;
     color: white;
+    margin: 2px;
+    font-size: 10px;
+    font-family: Arial;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 150px;
+    padding: 5px;
+}
+
+.goodName {
+    color: black;
+    margin: 15px;
+    float: left;
 }
