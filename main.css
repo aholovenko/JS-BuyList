@@ -6,14 +6,14 @@ body {
     width: 55%;
     height: 20%;
     float: left;
-    margin-left: 7%;
+    margin-left: 10%;
 }
 
 .section2 {
-    width: 25%;
-    height: 40%;
+    width: 23%;
+    height: 80%;
     float: right;
-    margin-right: 7%;
+    margin-right: 10%;
 }
 
 .box {
@@ -45,6 +45,19 @@ input[type=text]:focus {
     color: #131955;
 }
 
+input[type=gName ] {
+    width: auto;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+}
+
+input[type=gName ]:focus {
+    font-family: Andalus;
+    font-size: 12px;
+    color: green;
+}
+
 #addButton {
     width: 120px;
     height: 40px;
@@ -61,7 +74,7 @@ input[type=text]:focus {
     position: absolute;
 }
 
-#addButton:hover{
+#addButton:hover {
     background-color: #1a6abb;
 }
 
@@ -74,50 +87,29 @@ input[type=text]:focus {
     padding: 10px;
 }
 
-/*.line1 {
-    width: 750px;
-    border-bottom: 1px solid #d9d9d9;
-    margin-top: 70px;
-}
-
-.line11 {
-    margin-top: 50px;
-}
-
-.line2 {
+.lineShort {
     width: 320px;
+    margin-right: 12%;
     border-bottom: 1px solid #d9d9d9;
 }
 
-.line21 {
-    margin-top: 60px;
-}*/
-
-
-
-/*.box3 {
-    width: auto;
-    height: 25px;
-    background-color: #e6e6e6;
-    margin: 15px 5px 15px 5px;
-    border-radius: 4px;
+.good {
     border: 1px solid #d9d9d9;
-    padding: 3px;
-    font-size: 12px;
-    color: #555555;
-    font-family: "Sans-serif";
+    margin-top: 10%;
+}
+
+.goodName {
+    color: black;
+    margin: 15px;
     float: left;
-    display: inline-block;
-}*/
+}
 
-
-
-/*.minus {
+.minus {
     display: inline-block;
     height: 30px;
     width: 30px;
     margin: 10px 5px 10px 5px;
-    background-color: #d92929;
+    background-color: #ff2828;
     border-radius: 4px;
     border: 1px solid #d9d9d9;
     color: white;
@@ -129,6 +121,13 @@ input[type=text]:focus {
     border-radius: 150px;
     box-shadow: 0px 2px #c12525;
     float: right;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.minus:hover {
+    background-color: #e92525;
 }
 
 .plus {
@@ -136,7 +135,7 @@ input[type=text]:focus {
     height: 30px;
     width: 30px;
     margin: 10px 190px 10px 5px;
-    background-color: #21b844;
+    background-color: #24cb4b;
     border-radius: 4px;
     border: 1px solid #d9d9d9;
     color: white;
@@ -148,9 +147,16 @@ input[type=text]:focus {
     border-radius: 150px;
     box-shadow: 0px 2px #178330;
     float: right;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
 
-.quant {
+.plus:hover {
+    background-color: #20b543;
+}
+
+.quantity {
     display: inline-block;
     align: center;
     height: 10px;
@@ -182,6 +188,13 @@ input[type=text]:focus {
     font-weight: bold;
     box-shadow: 0px 2px #b7b7b7;
     float: right;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.baught:hover {
+    background-color: #bbbbbb;
 }
 
 .cross {
@@ -189,7 +202,7 @@ input[type=text]:focus {
     width: 30px;
     float: right;
     margin: 10px 15px 10px 0px;
-    background-color: #d92929;
+    background-color: #ee2d2d;
     border-radius: 4px;
     border: 1px solid #d9d9d9;
     color: white;
@@ -199,9 +212,16 @@ input[type=text]:focus {
     font-weight: bold;
     border-color: #dc2a2a;
     box-shadow: 0px 2px #c12525;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
 
-.crossedText{
+.cross:hover {
+    background-color: #c62525;
+}
+
+.crossedText {
     text-decoration: line-through;
 }
 
@@ -221,16 +241,25 @@ input[type=text]:focus {
     padding: 5px;
 }
 
-.goodName {
-    color: black;
-    margin: 15px;
-    float: left;
-}
-
-.notBought{
+.notBought {
     margin: 10px 15px 10px 5px;
 }
 
-.notBoughtQuant{
+.notBoughtQuant {
     margin: 10px 265px 10px 5px;
-}*/
+}
+
+.box3 {
+    width: auto;
+    height: 25px;
+    background-color: #e6e6e6;
+    margin: 15px 5px 15px 5px;
+    border-radius: 4px;
+    border: 1px solid #d9d9d9;
+    padding: 3px;
+    font-size: 12px;
+    color: #555555;
+    font-family: "Sans-serif";
+    float: left;
+    display: inline-block;
+}
