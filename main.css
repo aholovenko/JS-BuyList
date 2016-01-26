@@ -4,7 +4,7 @@ body {
 
 .section1 {
     width: 55%;
-    height: 20%;
+    height: 25%;
     float: left;
     margin-left: 10%;
 }
@@ -95,7 +95,7 @@ input[type=gName ]:focus {
 
 .good {
     border: 1px solid #d9d9d9;
-    margin-top: 10%;
+    margin-top: 9%;
 }
 
 .goodName {

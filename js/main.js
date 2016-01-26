@@ -3,10 +3,21 @@
  */
 //You	should	wrap	all	your	jQuery	code
 //$(function () {
-//This	function	will	be	called
-//	after	the	DOM	was	loaded	and	ready
-//Here	we	can	place	all	jQuery	Code
- //   $('input').click(function () {
- //       $(this).css("font-size", "30px");
- //   });
+// $('input').click(function () {
+//   $(this).css("font-size", "30px");
 //});
+//});
+
+
+var title = "Сир";
+
+function addItem(title) {
+    var node = $(ITEM_TEMPLATE);	//Create	new	HTML	node
+    node.find(".goodName").text(title);	//Set	product	title
+//Delete	Action
+    node.find(".cross").click(function () {
+        node.remove();
+    });
+    LIST.append(node);	//Add	to	the	end	of	the	list
+}
+$('addButton').click(addItem);
