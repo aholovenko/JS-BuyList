@@ -2,77 +2,69 @@
 <html>
 <head lang="uk">
     <meta charset="UTF-8">
-    <title>Basket Of Goods</title>
+    <title>AHolovenko</title>
     <link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
 <!---change only here-->
 <body>
-<div class="box section1">
+<div class="section1">
     <form>
-        <input type="text" id="addForm" placeholder="Назва товару">
+        <input type="text" id="addForm" placeholder="Назва товару" value="">
         <input type="button" id="addButton" value="Додати">
     </form>
 
+    <div class="template">
+        <div class="good">
+            <input type="gName" class="goodName" value="Йогурт">
+            <input type="button" class="cross" value="x">
+            <input type="button" class="baught" value="Куплено">
+            <input type="button" class="plus" value="+">
+
+            <div class=" quantity ">1</div>
+            <input type="button" class="minus" value="-">
+        </div>
+    </div>
     <div class="good">
-        <input type="gName" class="goodName" value="One">
+        <input type="gName" class="goodName" value="Молоко">
         <input type="button" class="cross" value="x">
         <input type="button" class="baught" value="Куплено">
         <input type="button" class="plus" value="+">
-        <div class=" quantity "></div>
+
+        <div class=" quantity ">1</div>
         <input type="button" class="minus" value="-">
     </div>
-
     <div class="good">
-        <input type="gName" class="goodName" value=" Two">
+        <input type="gName" class="goodName" value="Кефір">
         <input type="button" class="cross" value="x">
         <input type="button" class="baught" value="Куплено">
         <input type="button" class="plus" value="+">
-        <div class=" quantity "></div>
+
+        <div class=" quantity ">1</div>
         <input type="button" class="minus" value="-">
     </div>
-
-    <div class="good">
-        <input type="gName" class="goodName" value=" Three">
-        <input type="button" class="cross" value="x">
-        <input type="button" class="baught" value="Куплено">
-        <input type="button" class="plus" value="+">
-        <div class=" quantity "></div>
-        <input type="button" class="minus" value="-">
-    </div>
-
-    
-</div>
-<!--
-=
--->
-<div class="box section2">
-    <div class="rightSecText ">Залишилося</div>
-
-    <div class="lineShort"></div>
-    <div class="boughtGoods">
-
-    </div>
-    <div class="lineShort"></div>
-    <!--
-          <div class="box3">Печиво
-              <div class="c1">1</div>
-        iv>
-    <!--
-          <div class="box3">Сир
-              <div class="c1">1</div>
-          </div>
-
-          <div class="line2 line21"></div>-->
-
-    <div class="rightSecText">Куплено</div>
-    <div class="lineShort"></div>
-    <!--
-        <div class="box3 crossedText">Помідори
-            <div class="c1 ">2</div>
-        </div>-->
 
 </div>
 
+<div class="section2">
+
+    <div class="pannel"><h3>Залишилося</h3></div>
+    <div class="pannel">
+        <div class="statsPan">
+            <span class="template2">
+                <span class="statsItem"><span class="title">Йогурт</span><span class="c">1</span></span></span>
+            <span class="statsItem"><span class="title">Молоко</span><span class="c">1</span></span>
+            <span class="statsItem"><span class="title">Кефір</span><span class="c">1</span></span>
+        </div>
+    </div>
+
+    <div class="pannel"><h3>Куплено</h3></div>
+    <div class="pannel">
+        <div class="statsPan">
+        </div>
+    </div>
+
+
+</div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
