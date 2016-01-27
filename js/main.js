@@ -13,14 +13,17 @@ $(function () {
     var ITEM_STATS_TEMPLATE = $(".template2").html();
 
 
-    //click or keypress addButton to add a new good
+    //click addButton to add a new good
     $('#addButton').click(function () {
         //var that remembers name of a good read from the input form
         var title = $("#addForm").val();
         $("#addForm").val("");
-
         if (title == "")
             return;
+        create(title);
+    });
+
+    function create(title) {
 
         var node = $(ITEM_TEMPLATE);
         var node2 = $(ITEM_STATS_TEMPLATE);
@@ -33,13 +36,18 @@ $(function () {
         //      node2.find(".name").text(title);
         //  });
 
+        node.find(".goodName").keyup(function () {
+            var x = node.find(".goodName").val();
+            node2.find(".name").text(x);
+        });
+
         //Delete Action
         node.find(".cross").click(function () {
             node.remove();
             node2.remove();
         });
 
-        var number = node.find(".quantity").text();
+        var number = 1;
 
         //change the quantity of the specific good in a list
         node.find(".plus").click(function () {
@@ -78,6 +86,7 @@ $(function () {
             node2.find(".name").css("text-decoration", "line-through");
             node2.find(".c").css("text-decoration", "line-through");
             LIST2.find("#statsPan2").append(node2);
+            $(this).parent().find(".goodName").prop("disabled", true);
         });
 
         node.find('.notBaught').click(function () {
@@ -92,6 +101,7 @@ $(function () {
             node2.find(".name").css("text-decoration", "none");
             node2.find(".c").css("text-decoration", "none");
             LIST2.find("#statsPan1").append(node2);
+            $(this).parent().find(".goodName").prop("disabled", false);
         });
 
         $('#addForm').focus();
@@ -101,67 +111,11 @@ $(function () {
         node2.find(".name").text(title);
         node2.find(".c").text(number);
         LIST2.find("#statsPan1").append(node2);
-    });
 
+    }
 
-    //actions with the existing goods from the list
-
-    $('.cross').click(function () {
-
-        var n = $(this).parent().find(".goodName").val();
-
-        $(LIST2).each(function () {
-            item = $(this).find(".statsItem");
-            if(item.find(".name"))
-            console.log(item+"-");
-            if ($(this).find(".name").text() == name)
-                $(this).parent().remove();
-        });
-
-        $(this).parent().remove();
-    });
-
-    $('.plus').click(function () {
-        var num = $(this).parent().find(".quantity").text();
-        num = parseInt(num);
-        num++;
-        if (num > 1) {
-            $(this).parent().find(".minus").css("background-color", "#db2828");
-        }
-        $(this).parent().find(".quantity").text(num);
-    });
-
-    $('.minus').click(function () {
-        var num = $(this).parent().find(".quantity").text();
-        num = parseInt(num);
-        if (num > 1) {
-            $(this).parent().find(".quantity").text(--num);
-        }
-        if (num == 1) {
-            $(this).css("background-color", "#ef9e9e");
-        }
-    });
-
-    $('.notBaught').hide();
-
-    $('.baught').click(function () {
-        $(this).parent().find(".quantity").css("margin-right", "275px");
-        $(this).parent().find(".goodName").css("text-decoration", "line-through");
-        $(this).parent().find(".cross").hide();
-        $(this).parent().find(".plus").hide();
-        $(this).parent().find(".minus").hide();
-        $(this).hide();
-        $(this).parent().find(".notBaught").show();
-    });
-
-    $('.notBaught').click(function () {
-        $(this).parent().find(".quantity").css("margin-right", "5px");
-        $(this).parent().find(".goodName").css("text-decoration", "none");
-        $(this).parent().find(".cross").show();
-        $(this).parent().find(".plus").show();
-        $(this).parent().find(".minus").show();
-        $(this).hide();
-        $(this).parent().find(".baught").show();
-    });
+    create("Йогурт");
+    create("Молоко");
+    create("Сік");
 
 });

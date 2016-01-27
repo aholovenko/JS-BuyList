@@ -1,5 +1,5 @@
 body {
-    background-color: #d9d9d9;
+    background:linear-gradient(-90deg, #eeeeee, #dfdfdf);
 }
 
 .section1 {
@@ -43,9 +43,10 @@ input[type=gName ] {
 }
 
 input[type=gName ]:focus {
-    font-family: Andalus;
-    font-size: 12px;
-    color: green;
+    font-family: "Niagara Solid";
+    font-size: 15px;
+    color: #1923a8;
+    text-align: center;
 }
 
 #addButton {
